@@ -1,26 +1,13 @@
 html, body {
-	background-color: white;
+	background-color: #0f0;
 	height: 100%;
 	width: 100%;
+	line-height: normal;
 }
 
 @font-face {
 	font-family: 'digi';
 	src: url('/fonts/digital-7.tff');
-}
-
-#mainclock {
-	color: black;
-	font-family: 'digi', sans-serif;
-	font-size: 18em;
-	margin-top: -0.075em;
-	margin-bottom: 0;
-}
-
-#maintimercontainer {
-	border-left: 5px solid black;
-	border-right: 5px solid black;
-	height: 25%;
 }
 
 #tournament {
@@ -29,64 +16,79 @@ html, body {
 
 #bottom {
 	height: 25%;
-	border-top: 5px solid black;
-}
-
-#tournamentlogo {
-	height: 75%;
-	margin: 0 auto;
-}
-
-#tournamenttitle {
-	font-family: 'Syncopate', sans-serif;
-	color: black;
-	padding-bottom: 1em;
-}
-
-#shotclockcontainer {
-	padding-top: -1.5em;
-	border-right: 10px solid black;
-}
-
-#shotclock {
-	color: black;
-	font-family: 'Syncopate';
-	margin-top: 0;
-	font-size: 2.5em;
-}
-
-#shotclocktimer {
-	color: black;
-	font-size: 12em;
-	font-family: 'digi', sans-serif;
-	margin-bottom: 0;
-}
-
-.score {
-	color: black;
-}
-
-.scorenumber {
-	font-family: 'Exo 2', sans-serif;
-	font-size: 25em;
-}
-
-#teamhome {
-	border-right: 5px solid black;
-}
-
-#teamaway {
-	border-left: 5px solid black;
-}
-
-.teamlabel {
-	font-family: 'Syncopate', sans-serif;
-	font-size: 6em;
 }
 
 #scores {
-	height: 50%;
-	border-bottom: 5px solid black;
+	font-family: "Arial";
+	font-weight: bold;
+	font-size: 2.75vh;
+	display: table;
+	table-layout: fixed;
+	position: absolute;
+	left: 20%;
+	top: 88%;
+	width: 60%;
+	height: 7%;
+	background-color: yellow;
+	border-bottom: 1.25vh solid black;
+}
+
+.left-center-wrapper {
+	display: flex;
+  	justify-content: left;
+	padding-left: 2vh;
+  	align-items: center;
+	height: 100%;
+}
+
+.center-wrapper {
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+	height: 100%;
+}
+
+.teamlabel {
+	box-sizing: content-box;
+	display: table-cell;
+	color: ghostwhite;
+	width: 40%;
+	height: 100%;
+}
+
+.scorelabel {
+	box-sizing: content-box;
+	display: table-cell;
+	color: ghostwhite;
+	width: 10%;
+	height: 100%;
+}
+
+.timelabel {
+	background-color: black;
+	box-sizing: content-box;
+	display: table-cell;
+	color: yellow;
+	width: 15%;
+	height: 100%;
+}
+
+#hometeamlabel {
+	background-color: steelblue;
+}
+
+#homescorenumber {
+	background-color: steelblue;
+	filter: brightness(90%);
+}
+
+#awayteamlabel {
+	background-color: indianred;
+}
+
+#awayscorenumber {
+	background-color: indianred;
+	filter: brightness(90%);
 }
 
 .vertical-center {

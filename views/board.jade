@@ -5,18 +5,17 @@ html
 		link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Syncopate|Source+Code+Pro|Exo+2|Droid+Sans' rel='stylesheet")
 		link(rel="stylesheet" href="css/board.css")
 	body
-		.text-center#scores
-			.col-md-6#teamhome.score
-			.col-md-6#teamaway.score
-		#maintimercontainer.text-center.container
-			h1#mainclock
-		.text-center#bottom
-			.col-md-6#shotclockcontainer
-				h2#shotclocktimer
-				h3#shotclock Shot Clock
-			.col-md-6#tournament
-				img#tournamentlogo.img.img-responsive
-		audio#buzzer(src="sound/buzzer.mp3" preload="auto")
+		#scores
+			.teamlabel#hometeamlabel
+				.left-center-wrapper
+			.scorelabel#homescorenumber
+				.center-wrapper
+			.teamlabel#awayteamlabel
+				.left-center-wrapper
+			.scorelabel#awayscorenumber
+				.center-wrapper
+			.timelabel#mainclock
+				.center-wrapper
 		script(src="socket.io/socket.io.js")
 		script(src="//code.jquery.com/jquery-1.11.0.min.js")
 		script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")

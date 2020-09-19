@@ -35,12 +35,10 @@ socket.on('initial game state', function (initialState) {
 	}
 	if (FIRST_CONFIG) {
 		$('#tournamentlogo').attr('src', initialConfig.tournament_logo);
-		var homehtml = '<h4 class="teamlabel">' + initialConfig.team_home + '</h4><h2 class="scorenumber" id="' + initialConfig.team_home + 'score"></h2>';
-		var awayhtml = '<h4 class="teamlabel">' + initialConfig.team_away + '</h4><h2 class="scorenumber" id="' + initialConfig.team_away + 'score"></h2>';
-		$('#teamhome').append(homehtml);
-		$('#teamaway').append(awayhtml);
-		setScore(initialConfig.team_home, initialConfig.team_home_score);
-		setScore(initialConfig.team_away, initialConfig.team_away_score);
+		$('#hometeamlabel > .left-center-wrapper').append(initialConfig.team_home);
+		$('#awayteamlabel > .left-center-wrapper').append(initialConfig.team_away);
+		$('#homescorenumber > .center-wrapper').append('<div id="' + initialConfig.team_home.replace(' ','-') + 'score">' + initialConfig.team_home_score + '<div>');
+		$('#awayscorenumber > .center-wrapper').append('<div id="' + initialConfig.team_away.replace(' ','-') + 'score">' + initialConfig.team_away_score + '<div>');
 		FIRST_CONFIG = false;
 	}
 	updateClock();
@@ -154,7 +152,7 @@ function updateClock () {
 		stopClock();
 		document.getElementById('buzzer').play();
 		socket.emit('update remote status', 'pause');
-		$('#mainclock').css('color', 'red');
+		//$('#mainclock').css('color', 'red');
 	}
 	var formattedTime = msToTime(CURRENT_TIME);
 	if (CURRENT_TIME >= TIME_CUTOFF) {
@@ -166,7 +164,7 @@ function updateClock () {
 		ms = ms / 100;
 		printTime = formattedTime[2] + '.' + ms;
 	}
-	$('#mainclock').text(printTime);
+	$('#mainclock > .center-wrapper').text(printTime);
 }
 
 
@@ -270,5 +268,5 @@ function startTimeout () {
  * @param {Number} score Score of the team
  */
 function setScore (team, score) {
-	$('#' + team + 'score').text(score);
+	$('#' + team.replace(' ','-') + 'score').text(score);
 }
