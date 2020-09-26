@@ -44,9 +44,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/board', function (req, res) {
-	res.render('auth', {
-		item: 'board'
-	});
+	res.render('board');
 });
 
 app.get('/remote', function (req, res) {

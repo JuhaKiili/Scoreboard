@@ -83,11 +83,11 @@ html, body {
 }
 
 #awayteamlabel {
-	background-color: indianred;
+	background-color: #bb0;
 }
 
 #awayscorenumber {
-	background-color: indianred;
+	background-color: #bb0;
 	filter: brightness(90%);
 }
 

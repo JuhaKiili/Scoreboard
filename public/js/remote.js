@@ -60,6 +60,34 @@ $('#teamawayminus').click(function () {
 	changeScore(initialConfig.team_away, val);
 });
 
+$('#teamhomeplus2').click(function () {
+	var val = parseInt($('#teamhomescore').attr('value'));
+	val+=2;
+	$('#teamhomescore').attr('value', val);
+	changeScore(initialConfig.team_home, val);
+});
+
+$('#teamawayplus2').click(function () {
+	var val = parseInt($('#teamawayscore').attr('value'));
+	val+=2;
+	$('#teamawayscore').attr('value', val);
+	changeScore(initialConfig.team_away, val);
+});
+
+$('#teamhomeplus3').click(function () {
+	var val = parseInt($('#teamhomescore').attr('value'));
+	val+=3;
+	$('#teamhomescore').attr('value', val);
+	changeScore(initialConfig.team_home, val);
+});
+
+$('#teamawayplus3').click(function () {
+	var val = parseInt($('#teamawayscore').attr('value'));
+	val+=3;
+	$('#teamawayscore').attr('value', val);
+	changeScore(initialConfig.team_away, val);
+});
+
 /**
  * Function to change the score of a team
  * @param  {Strong} scoreTeam Name of the team that scored
