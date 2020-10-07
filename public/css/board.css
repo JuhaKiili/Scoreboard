@@ -41,6 +41,13 @@ html, body {
 	height: 100%;
 }
 
+.right-center-wrapper {
+  	text-align: right;
+	padding-right: 2vh;
+  	align-items: center;
+	height: 100%;
+}
+
 .center-wrapper {
 	display: flex;
   	justify-content: center;
@@ -52,16 +59,44 @@ html, body {
 	box-sizing: content-box;
 	display: table-cell;
 	color: ghostwhite;
-	width: 40%;
+	width: 37%;
 	height: 100%;
+	padding-top: 0.3%;
 }
 
 .scorelabel {
 	box-sizing: content-box;
 	display: table-cell;
 	color: ghostwhite;
+	width: 8%;
+	height: 100%;
+}
+
+.midlabel {
+	box-sizing: content-box;
+	display: table-cell;
+	color: gray;
+	background-color: black;
 	width: 10%;
 	height: 100%;
+}
+
+.midlabelfloat {
+	position: absolute;
+	color: gray;
+	background-color: black;
+	width: 6.1%;
+	height: 9%;
+	left: 47%;
+	top: 87%;
+	font-family: "Arial Black";
+	font-weight: normal;
+	font-size: 3vh;
+	padding-bottom: 0.3%;
+}
+
+p {
+	margin: 0;
 }
 
 .timelabel {
@@ -74,20 +109,20 @@ html, body {
 }
 
 #hometeamlabel {
-	background-color: steelblue;
+	background-color: #aa0;
 }
 
 #homescorenumber {
-	background-color: steelblue;
+	background-color: #aa0;
 	filter: brightness(90%);
 }
 
 #awayteamlabel {
-	background-color: #bb0;
+	background-color: steelblue;
 }
 
 #awayscorenumber {
-	background-color: #bb0;
+	background-color: steelblue;
 	filter: brightness(90%);
 }
 

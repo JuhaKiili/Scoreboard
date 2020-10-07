@@ -30,6 +30,12 @@ $('#timeout').click(function () {
 	socket.emit('start timeout', '');
 });
 
+// Button handler to send signal to server to start a timeout
+$('#midlabelbtn').click(function () {
+	socket.emit('mid label', {label: $('#midlabel').val()});
+	console.log({label: $('#midlabel').val()});
+});
+
 // Functions to give functionality to plus and minus buttons
 
 $('#teamhomeplus').click(function () {
@@ -97,7 +103,7 @@ function changeScore (scoreTeam, newScore) {
 	var out = {
 		score: newScore,
 		team: scoreTeam
-	}
+	};
 	socket.emit('update score', out);
 }
 

@@ -36,9 +36,10 @@ socket.on('initial game state', function (initialState) {
 	if (FIRST_CONFIG) {
 		$('#tournamentlogo').attr('src', initialConfig.tournament_logo);
 		$('#hometeamlabel > .left-center-wrapper').append(initialConfig.team_home);
-		$('#awayteamlabel > .left-center-wrapper').append(initialConfig.team_away);
-		$('#homescorenumber > .center-wrapper').append('<div id="' + initialConfig.team_home.replace(' ','-') + 'score">' + initialConfig.team_home_score + '<div>');
-		$('#awayscorenumber > .center-wrapper').append('<div id="' + initialConfig.team_away.replace(' ','-') + 'score">' + initialConfig.team_away_score + '<div>');
+		$('#awayteamlabel > .right-center-wrapper').append(initialConfig.team_away);
+		$('#homescorenumber > .center-wrapper').append('<div id="' + initialConfig.team_home.replace(' ','-') + 'score">' + initialConfig.team_home_score + '</div>');
+		$('#awayscorenumber > .center-wrapper').append('<div id="' + initialConfig.team_away.replace(' ','-') + 'score">' + initialConfig.team_away_score + '</div>');
+		$('#midlabel > .center-wrapper').append('<p id="midcontent">' + initialConfig.midlabel + '</p>');
 		FIRST_CONFIG = false;
 	}
 	updateClock();
@@ -77,9 +78,15 @@ socket.on('start timeout signal', function () {
 
 // socket to update the score
 socket.on('update score signal', function (newScoreInfo) {
+	console.log('update score' + newScoreInfo);
 	setScore(newScoreInfo.team, newScoreInfo.score);
 });
 
+// socket to update the midlabel
+socket.on('mid label signal', function (labelInfo) {
+	console.log(labelInfo);
+	setMidlabel(labelInfo.label);
+});
 
 //=====================
 // Main Timer stuff
@@ -269,4 +276,17 @@ function startTimeout () {
  */
 function setScore (team, score) {
 	$('#' + team.replace(' ','-') + 'score').text(score);
+}
+
+//=====================
+// Midlabel stuff
+//=====================
+
+/**
+ * Function to set the score of a team
+ * @param {String} team  Name of the team
+ * @param {Number} score Score of the team
+ */
+function setMidlabel (text) {
+	$('#midcontent').text(text);
 }

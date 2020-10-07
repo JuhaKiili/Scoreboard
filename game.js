@@ -62,6 +62,12 @@ function Game (board_cfg, io, writeToLog) {
 			io.emit('update score signal', newScoreInfo);
 		});
 
+		// socket to receive signal to start a timeout from the remote
+		socket.on('mid label', function (labelInfo) {
+			writeToLog('Signal to change mid label ' + labelInfo);
+			io.emit('mid label signal', labelInfo);
+		});
+
 		/**
 		 * Function to pause timer on the board
 		 */
