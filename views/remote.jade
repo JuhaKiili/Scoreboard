@@ -7,16 +7,16 @@ html
 		title Scoreboard Remote
 	body
 		h1#maintitle.text-center Remote
-		.container.text-center
-			.col-xs-6
-				button#start.btn.btn-lg.btn-success.timerbutton Start
-			.col-xs-6
-				button#stop.btn.btn-lg.btn-danger.timerbutton Pause
-		.text-center
-			p#timerstatus
-		.text-center
-			button#shotclock.btn.btn-success.game-button Reset Shot Clock
-		br
+		//- .container.text-center
+		//- 	.col-xs-6
+		//- 		button#start.btn.btn-lg.btn-success.timerbutton Start
+		//- 	.col-xs-6
+		//- 		button#stop.btn.btn-lg.btn-danger.timerbutton Pause
+		//- .text-center
+		//- 	p#timerstatus
+		//- .text-center
+		//- 	button#shotclock.btn.btn-success.game-button Reset Shot Clock
+		//- br
 		.text-center#scores
 			.col-xs-6
 				h3#teamhometitle.teamtitle
@@ -38,26 +38,26 @@ html
 		.text-center
 			input(type="text", value="1ST")#midlabel
 			button#midlabelbtn.btn.btn-primary.game-button Save Midlabel
-		br
-		.text-center
-			button#timeout.btn.btn-primary.game-button Start Timeout
-		br
-		.text-center
-			button.btn.btn-danger(data-toggle="modal" data-target="#clearClockConfirm") Reset Clock
-		br
-		// Popup to confirm clearing the clock
-		#clearClockConfirm.modal.fade(role='dialog' aria-hidden='false')
-			.modal-dialog
-				.modal-content
-					.modal-header
-						button.close(data-dismiss='modal' aria-hidden='true'): span.glyphicon.glyphicon-remove-circle
-						h4.modal-title Reset Game Clock
-					.modal-body
-						h6 WARNING
-						p This will reset the game clock. This action CANNOT be undone.
-					.modal-footer
-						button.btn.btn-success Cancel
-						button#resetclock.btn.btn-danger(data-dismiss='modal' aria-hidden='true') Reset Clock
+		//- br
+		//- .text-center
+		//- 	button#timeout.btn.btn-primary.game-button Start Timeout
+		//- br
+		//- .text-center
+		//- 	button.btn.btn-danger(data-toggle="modal" data-target="#clearClockConfirm") Reset Clock
+		//- br
+		//- // Popup to confirm clearing the clock
+		//- #clearClockConfirm.modal.fade(role='dialog' aria-hidden='false')
+		//- 	.modal-dialog
+		//- 		.modal-content
+		//- 			.modal-header
+		//- 				button.close(data-dismiss='modal' aria-hidden='true'): span.glyphicon.glyphicon-remove-circle
+		//- 				h4.modal-title Reset Game Clock
+		//- 			.modal-body
+		//- 				h6 WARNING
+		//- 				p This will reset the game clock. This action CANNOT be undone.
+		//- 			.modal-footer
+		//- 				button.btn.btn-success Cancel
+		//- 				button#resetclock.btn.btn-danger(data-dismiss='modal' aria-hidden='true') Reset Clock
 		script(src="socket.io/socket.io.js")
 		script(src="//code.jquery.com/jquery-1.11.0.min.js")
 		script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
