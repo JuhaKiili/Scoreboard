@@ -6,7 +6,7 @@ html
 		link(rel="stylesheet" href="css/remote.css")
 		title Scoreboard Remote
 	body
-		h1#maintitle.text-center Remote
+		//- h1#maintitle.text-center Remote
 		//- .container.text-center
 		//- 	.col-xs-6
 		//- 		button#start.btn.btn-lg.btn-success.timerbutton Start
@@ -20,31 +20,31 @@ html
 		.text-center#scores
 			.col-xs-6
 				h3#teamhometitle.teamtitle
-				.btn-group-vertical
-					.scorebutton.btn#teamhomeplus: span.glyphicon.glyphicon-plus
-					.scorebutton.btn#teamhomeplus2: span.glyphicon.glyphicon-plus
-					.scorebutton.btn#teamhomeplus3: span.glyphicon.glyphicon-plus
+				.btn-group-vertical.thin-btn-group
+					.scorebutton.btn#teamhomeplus3: span.glyphicon.glyphicon-plus 3
+					.scorebutton.btn#teamhomeplus2: span.glyphicon.glyphicon-plus 2
+					.scorebutton.btn#teamhomeplus: span.glyphicon.glyphicon-plus 1
 					input.form-control.text-center#teamhomescore(type="number")
 					.scorebutton.btn#teamhomeminus: span.glyphicon.glyphicon-minus
 			.col-xs-6#teamaway
 				h3#teamawaytitle.teamtitle
-				.btn-group-vertical
-					.scorebutton.btn#teamawayplus: span.glyphicon.glyphicon-plus
-					.scorebutton.btn#teamawayplus2: span.glyphicon.glyphicon-plus
-					.scorebutton.btn#teamawayplus3: span.glyphicon.glyphicon-plus
+				.btn-group-vertical.thin-btn-group
+					.scorebutton.btn#teamawayplus3: span.glyphicon.glyphicon-plus 3
+					.scorebutton.btn#teamawayplus2: span.glyphicon.glyphicon-plus 2
+					.scorebutton.btn#teamawayplus: span.glyphicon.glyphicon-plus 1
 					input.form-control.text-center#teamawayscore(type="number")
 					.scorebutton.btn#teamawayminus: span.glyphicon.glyphicon-minus
 		br
 		.text-center
-			input(type="text", value="1ST")#midlabel
-			button#midlabelbtn.btn.btn-primary.game-button Save Midlabel
+			input(type="text", value="1ST")#midlabel.save-btn
+			br
+			button#midlabelbtn.btn.btn-primary.game-button.save-btn Save
 		//- br
 		//- .text-center
 		//- 	button#timeout.btn.btn-primary.game-button Start Timeout
 		//- br
 		//- .text-center
-		//- 	button.btn.btn-danger(data-toggle="modal" data-target="#clearClockConfirm") Reset Clock
-		//- br
+		//- 		//- br
 		//- // Popup to confirm clearing the clock
 		//- #clearClockConfirm.modal.fade(role='dialog' aria-hidden='false')
 		//- 	.modal-dialog

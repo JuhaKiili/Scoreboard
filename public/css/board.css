@@ -109,11 +109,11 @@ p {
 }
 
 #hometeamlabel {
-	background-color: #aa0;
+	background-color: #444;
 }
 
 #homescorenumber {
-	background-color: #aa0;
+	background-color: #444;
 	filter: brightness(90%);
 }
 

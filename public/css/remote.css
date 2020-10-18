@@ -4,8 +4,8 @@ html, body {
 }
 
 .timerbutton {
-	height: 10em;
-	width: 90%;
+	height: 5em;
+	width: 50%;
 }
 
 #maintitle {
@@ -43,5 +43,14 @@ html, body {
 
 .scorebutton {
 	background-color: white;
-	height: 4.5em;
+    height: 3em;
+    width: 50px;
+}
+
+.thin-btn-group {
+    width: 50%;
+}
+
+.save-btn {
+    margin-top: 20px;
 }
