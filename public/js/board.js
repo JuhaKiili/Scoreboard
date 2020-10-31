@@ -291,8 +291,12 @@ function setMidlabel (text) {
 
 function setAds (show) {
 	if(show) {
-		$('#adpic').animate({top: "1%"}, 2000);
+		$('#adpic').animate({top: "82%"}, 2000);
+		$('#scores').animate({top: "105%"}, 2000);
+		$('.midlabelfloat').animate({top: "105%"}, 2000);
 	} else {
-		$('#adpic').animate({top: "-20%"}, 2000);
+		$('#adpic').animate({top: "105%"}, 2000);
+		$('#scores').animate({top: "90%"}, 2000);
+		$('.midlabelfloat').animate({top: "89%"}, 2000);
 	}
 }
