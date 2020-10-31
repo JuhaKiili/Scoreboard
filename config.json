@@ -1,8 +1,8 @@
 {
 	"_comment": "All times must be in milliseconds",
 	"tournament_logo": "http://www.yenlo.com/en/wp-content/uploads/2013/02/wso2-logo-white-800X360-transparant.png",
-	"team_home": "NAKO",
-	"team_away": "HBC CURRENTUS",
+	"team_home": "HBC EMERITUS",
+	"team_away": "NAKO",
 	"password": "test",
 	"midlabel": "1ST",
 	"half_length": 600000,

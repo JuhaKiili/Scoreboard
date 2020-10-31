@@ -30,11 +30,43 @@ $('#timeout').click(function () {
 	socket.emit('start timeout', '');
 });
 
+$('#midlabel1st').addClass('active-btn');
+
 // Button handler to send signal to server to start a timeout
-$('#midlabelbtn').click(function () {
-	socket.emit('mid label', {label: $('#midlabel').val()});
-	console.log({label: $('#midlabel').val()});
+$('#midlabel1st').click(function () {
+	changeActiveButton('#midlabel1st', '1ST');
 });
+$('#midlabel2nd').click(function () {
+	changeActiveButton('#midlabel2nd', '2ND');
+});
+$('#midlabel3rd').click(function () {
+	changeActiveButton('#midlabel3rd', '3RD');
+});
+$('#midlabel4th').click(function () {
+	changeActiveButton('#midlabel4th', '4TH');
+});
+$('#midlabelht').click(function () {
+	changeActiveButton('#midlabelht', 'HT');
+});
+$('#midlabelft').click(function () {
+	changeActiveButton('#midlabelft', 'FT');
+});
+$('#ads').click(function () {
+	if($('#ads').hasClass('active-btn')) {
+		$('#ads').removeClass('active-btn');
+		socket.emit('ads', {show: false});
+	} else {
+		$('#ads').addClass('active-btn');
+		socket.emit('ads', {show: true});
+	}
+});
+
+
+function changeActiveButton(id, emitLabel) {
+	$('.game-button').removeClass('active-btn');
+	$(id).addClass('active-btn');
+	socket.emit('mid label', {label: emitLabel});
+}
 
 // Functions to give functionality to plus and minus buttons
 

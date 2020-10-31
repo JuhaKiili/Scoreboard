@@ -44,6 +44,7 @@ socket.on('initial game state', function (initialState) {
 	}
 	updateClock();
 	updateShotClock();
+	setAds(false);
 });
 
 // socket to recieve pause signal from server
@@ -86,6 +87,12 @@ socket.on('update score signal', function (newScoreInfo) {
 socket.on('mid label signal', function (labelInfo) {
 	console.log(labelInfo);
 	setMidlabel(labelInfo.label);
+});
+
+// socket to update the midlabel
+socket.on('ads signal', function (adsInfo) {
+	console.log(adsInfo);
+	setAds(adsInfo.show);
 });
 
 //=====================
@@ -278,15 +285,14 @@ function setScore (team, score) {
 	$('#' + team.replace(' ','-') + 'score').text(score);
 }
 
-//=====================
-// Midlabel stuff
-//=====================
-
-/**
- * Function to set the score of a team
- * @param {String} team  Name of the team
- * @param {Number} score Score of the team
- */
 function setMidlabel (text) {
 	$('#midcontent').text(text);
+}
+
+function setAds (show) {
+	if(show) {
+		$('#adpic').animate({top: "1%"}, 2000);
+	} else {
+		$('#adpic').animate({top: "-20%"}, 2000);
+	}
 }

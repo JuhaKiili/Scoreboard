@@ -54,3 +54,7 @@ html, body {
 .save-btn {
     margin-top: 20px;
 }
+
+.active-btn {
+	background-color: yellow;
+}

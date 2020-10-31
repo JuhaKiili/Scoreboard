@@ -33,6 +33,13 @@ html, body {
 	border-bottom: 1.25vh solid black;
 }
 
+.ad {
+	position: absolute;
+	left: 30%;
+	top: 1%;
+	width: 40%;
+}
+
 .left-center-wrapper {
 	display: flex;
   	justify-content: left;
@@ -109,20 +116,20 @@ p {
 }
 
 #hometeamlabel {
-	background-color: #444;
+	background-color: #A95;
 }
 
 #homescorenumber {
-	background-color: #444;
+	background-color: #A95;
 	filter: brightness(90%);
 }
 
 #awayteamlabel {
-	background-color: steelblue;
+	background-color: #444;
 }
 
 #awayscorenumber {
-	background-color: steelblue;
+	background-color: #444;
 	filter: brightness(90%);
 }
 
